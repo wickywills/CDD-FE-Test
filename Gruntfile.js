@@ -21,9 +21,7 @@ module.exports = function (grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['js/plugins/jquery.matchHeight-min.js',
-                    'js/plugins/jquery.smartresize.js',
-                    'js/plugins/jquery.advantec.tabs.js',
+                src: ['js/jquery.smartresize.js',
                     'js/custom.js',
                     'js/responsive.js'],
                 dest: 'js/custom.concat.js',
