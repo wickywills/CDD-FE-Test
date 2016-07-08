@@ -1,0 +1,110 @@
+// ==========================================================================================
+// TYPOGRAPHY DEFAULTS
+// ==========================================================================================
+
+body { color: #000; letter-spacing: 0px; }
+
+
+/* General headings */
+// ------------------------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 { color: #000; line-height: 1.25; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { margin-bottom: .6em;}
+h2 {  margin-bottom: .3em; }
+h3 { font-size: 1.133em; margin-bottom: .7em;  }
+h4 { font-size:1.077em; margin-bottom: .4em; }
+
+address + ul, address + ol, address + p, 
+ul + h2, ol + h2, p + h2, 
+ul + h3, ol + h3, p + h3, 
+ul + h4, ol + h4, p + h4, 
+ul + h5, ol + h5, p + h5,
+ul + h6, ol + h6, p + h6, 
+ul + p, p + ul, ol + p, p + p, 
+ul + div, ol + div, p + div, p + figure,
+h2 + h2, h2 + h3, h2 + h4,
+h3 + h2, h3 + h3, h3 + h4,
+h4 + h2, h4 + h3, h4 + h4 { margin-top: .8em; }
+
+p + h2 { margin-top: 2em; }
+
+
+/* Paragraph styles */
+// ------------------------------------------------------------------------------------------
+p img { margin: 0; }
+p.lead { color: #000; text-align: center; letter-spacing: -2px; padding: 0px 20px; }
+p.lead-small { color: #000; text-align: left; padding: 0px; letter-spacing: -1px; }
+b,strong {}
+.strong-upper {}
+p small { font-size: 0.800em; }
+
+
+/* Links */
+// ------------------------------------------------------------------------------------------
+a { color: #0e91cd; text-decoration: none; }
+a:hover { color: #223876; text-decoration: underline; }
+
+
+/* Misc colours */
+// ------------------------------------------------------------------------------------------
+.light-blue { color: #0e90cd; }
+
+
+/*	Blockquotes  */
+// ------------------------------------------------------------------------------------------
+blockquote, blockquote p { line-height: 20px; color: #777; }
+blockquote { margin: 0 0 18px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+blockquote cite { display: block; font-size: 12px; font-size: 1.2rem; color: #555; }
+blockquote cite:before { }
+blockquote cite a, blockquote cite a:visited { color: #555; }
+
+
+/* Horizontal rules */
+// ------------------------------------------------------------------------------------------
+hr { border: solid #ddd; border-width: 0px 0 0; clear: both; margin: 40px auto 40px; height: 2px; background: ~"url('images/hr-light.gif')"; max-width: 940px; }
+
+
+/* List styles */
+// ------------------------------------------------------------------------------------------
+article ul { margin-bottom: 1.4em; }
+article ul li { background:~"url(images/bullet-red.png)" left .6em no-repeat; padding-left: 15px; margin-bottom: .6em; }
+article ul.lead { letter-spacing: -1px; text-transform: uppercase; }
+article ul.lead.centered li { background:none; padding:0px; text-align: center; margin-bottom: 12px; }
+
+
+/* Smaller text styles (see home page blog,twitter etc) */
+// ------------------------------------------------------------------------------------------
+.smaller { color: #000; }
+
+
+/* Wordpress specifics */
+// ------------------------------------------------------------------------------------------
+.alignleft { float: left; margin: 0 15px 10px 0; }
+.alignright { float: right; margin: 0 0 10px 15px; }
+
+.image.right, 
+.image.left { position: relative; z-index: 2; }
+
+.image.right img, 
+.image.left img { border: 5px solid #fff; .rounded(4px); .border-box; }
+
+.image.right:after, 
+.image.left:after { content: " "; position: absolute; bottom: -24px; left: 0px; z-index: -1; width: 100%; background: ~"url('images/bottom-box-shadow.png')" top no-repeat; height: 30px; opacity: .99; background-size: 100%; }
+
+.image.left { float: left; margin-right: 15px; }
+.image.right { float: right; margin-left: 15px; }
+
+
+/* Images */
+// -----------------------------------------------------------------------------------------
+figure {}
+figure + figure { margin-top: 1em; }
+figure figcaption {  }
+
+
+/* Responsive */
+// ------------------------------------------------------------------------------------------
+
+
+
