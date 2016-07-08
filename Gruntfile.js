@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         },
         watch: {
             compile: {
-                files: ['**/*.php', '<%= path %>css/**/*.less', '<%= path %>js/**/*.js', '!<%= path %>js/custom.min.js', '!<%= path %>js/custom.concat.js'],
+                files: ['**/*.html', '<%= path %>less/**/*.less', '<%= path %>js/**/*.js', '!<%= path %>js/custom.min.js', '!<%= path %>js/custom.concat.js'],
                 tasks: ['less', 'concat', 'uglify'],
                 options: {
                     atBegin: true,
