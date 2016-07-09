@@ -1,0 +1,28 @@
+/*	NAVIGATION					 						
+    ===================================================================== */
+
+.section-nav {
+	position: fixed;
+	right: 60px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 999;
+
+	li + li {
+		margin-top: 20px;
+	} // li
+} // .section-nav
+
+.section-nav__link {
+	display: block;
+	text-indent: -9999px;
+	.rounded(50%);
+	height: 1.25rem;
+	width: 1.25rem;
+	background: @ui-nav-dot;
+	.transition;
+
+	&.active, &:hover {
+		background: @ui-nav-dot-o;
+	}
+} // .section-nav__link
