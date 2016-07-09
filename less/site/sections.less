@@ -17,10 +17,11 @@
 
 /*	Sections general
 	--------------------------------------------------------------------- */
-	[class^="section"] {
+	section[class^="section"] {
 		position: relative;
 		font-size: 1.875rem;
 		color: @txt-blue;
+		border-bottom: 2px solid #000;
 
 		.large-text {
 			display: block;
@@ -86,3 +87,32 @@
 		width: 500px;
 		margin-left: -540px;
 	} // section-actions__content
+
+
+/*	Friend
+	--------------------------------------------------------------------- */
+	.section-friend {
+
+	} // .section-friend
+
+	.section-friend__giovanni {
+		position: absolute;
+		height: 300px;
+		top: 50%;
+		left: 50%;
+	    margin: -210px 0 0 -100px;
+	} // .section-friend__giovanni
+
+	.section-friend__leonardo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -140px 0 0 20px;
+	} // .section-friend__leonardo
+
+	.section-friend__content {
+		.vert-centered;
+		left: 50%;
+		width: 500px;
+		margin-left: -540px;
+	} // section-friend__content
