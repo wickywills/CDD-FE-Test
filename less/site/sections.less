@@ -1,0 +1,52 @@
+/* 	SECTIONS
+	===================================================================== */
+
+	// Grey radial gradient background
+	body {
+		background: rgba(255,255,255,1);
+		background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 27%, rgba(197,216,224,1) 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(26%, rgba(255,255,255,1)), color-stop(27%, rgba(255,255,255,1)), color-stop(100%, rgba(197,216,224,1)));
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 27%, rgba(197,216,224,1) 100%);
+		background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 27%, rgba(197,216,224,1) 100%);
+		background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 27%, rgba(197,216,224,1) 100%);
+		background: radial-gradient(ellipse at center, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 27%, rgba(197,216,224,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c5d8e0', GradientType=1 );
+		background-attachment: fixed;
+	}
+
+
+/*	Sections general
+	--------------------------------------------------------------------- */
+	[class^="section"] {
+		position: relative;
+		font-size: 1.875rem;
+		color: @txt-blue;
+
+		.large-text {
+			display: block;
+			font: 800 4.375rem/1.2 'Open Sans';
+			color: @txt-lime;
+			text-transform: uppercase;
+			letter-spacing: 0.188rem;
+		}
+	}
+
+
+/*	Welcome
+	--------------------------------------------------------------------- */
+	.section-welcome {
+
+	} // .section-welcome
+
+	.section-welcome__giovanni {
+		.hor-centered;
+		top: 50%;
+		margin-top: -300px;
+	} // .section-welcome__giovanni
+
+	.section-welcome__content {
+		.hor-centered;
+		top: 50%;
+		text-align: center;
+		margin-top: 140px;
+	} // .section-welcome__content
