@@ -1,125 +1,48 @@
-// ==========================================================================================
-// CUSTOM MIXINS
-// ==========================================================================================
+/*  CUSTOM MIXINS
+	===================================================================== */
+	.sprite (@xpos:0px, @ypos:0px){ 
+		background: ~"url('images/sprite.png')" @xpos @ypos; 
+	}
 
-.inline-block { display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; }
-.border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.sprite (@xpos:0px, @ypos:0px){ background: ~"url('images/sprite.png')" @xpos @ypos; }
-.sprite-psuedo (@xpos:0px, @ypos:0px){
-  background: transparent ~"url('images/sprite.png')" @xpos @ypos;
-  content: ""; 
-  display: block; 
-  position: absolute; 
-}
+	.sprite-psuedo (@xpos:0px, @ypos:0px){
+		background: transparent ~"url('images/sprite.png')" @xpos @ypos;
+		content: ""; 
+		display: block; 
+		position: absolute; 
+	}
 
-.fa-icon(@content) {
-  content: @content; 
-  display: block; 
-  position: absolute; 
-  .fontawesome();
-  z-index: 99;
-}
+	.fa-icon(@content) {
+		content: @content; 
+		display: block; 
+		position: absolute; 
+		.fontawesome();
+		z-index: 99;
+	}
 
-.no-highlight {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+	.no-highlight {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 
+	.rounded(@radius: 2px) {
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+		border-radius: @radius;
+	}
 
+	.hor-vert-centered {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+	}
 
-// ==========================================================================================
-// CSS3 MIXINS from http://lesselements.com (ver 0.9)
-// ==========================================================================================
-
-.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
-  background: @color;
-  background: -webkit-gradient(linear,
-                               left bottom,
-                               left top,
-                               color-stop(0, @start),
-                               color-stop(1, @stop));
-  background: -ms-linear-gradient(bottom,
-                                  @start,
-                                  @stop);
-  background: -moz-linear-gradient(center bottom,
-                                   @start 0%,
-                                   @stop 100%);
-  background: -o-linear-gradient(@stop,
-                                 @start);
-  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
-}
-.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
-  background: @color;
-  background: -webkit-gradient(linear,
-                               left bottom,
-                               left top,
-                               color-stop(0, rgb(@start,@start,@start)),
-                               color-stop(1, rgb(@stop,@stop,@stop)));
-  background: -ms-linear-gradient(bottom,
-                                  rgb(@start,@start,@start) 0%,
-                                  rgb(@stop,@stop,@stop) 100%);
-  background: -moz-linear-gradient(center bottom,
-                                   rgb(@start,@start,@start) 0%,
-                                   rgb(@stop,@stop,@stop) 100%);
-  background: -o-linear-gradient(rgb(@stop,@stop,@stop),
-                                 rgb(@start,@start,@start));
-  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start)));
-}
-.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
-  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-}
-.rounded(@radius: 2px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  border-radius: @radius;
-}
-.transition-duration(@duration: 0.2s) {
-  -moz-transition-duration: @duration;
-  -webkit-transition-duration: @duration;
-  -o-transition-duration: @duration;
-  transition-duration: @duration;
-}
-.transform(...) {
-  -webkit-transform: @arguments;
-  -moz-transform: @arguments;
-  -o-transform: @arguments;
-  -ms-transform: @arguments;
-  transform: @arguments;
-}
-.rotate(@deg:5deg){
-  .transform(rotate(@deg));
-}
-.scale(@ratio:1.5){
-  .transform(scale(@ratio));
-}
-.transition(@duration:0.2s, @ease:ease-out) {
-  -webkit-transition: all @duration @ease;
-  -moz-transition: all @duration @ease;
-  -o-transition: all @duration @ease;
-  transition: all @duration @ease;
-}
-.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
-  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-}
-.box-shadow(@arguments) {
-  -webkit-box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  box-shadow: @arguments;
-}
-.box-sizing(@sizing: border-box) {
-  -ms-box-sizing: @sizing;
-  -moz-box-sizing: @sizing;
-  -webkit-box-sizing: @sizing;
-  box-sizing: @sizing;
-}
-.translate(@x:0, @y:0) {
-  .transform(translate(@x, @y));
-}
+	.hor-centered {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
