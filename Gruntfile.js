@@ -22,6 +22,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: ['js/jquery.smartresize.js',
+                    'js/jquery.scrollify.min.js',
                     'js/custom.js',
                     'js/responsive.js'],
                 dest: 'js/custom.concat.js',
