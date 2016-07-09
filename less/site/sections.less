@@ -20,13 +20,13 @@
 	section[class^="section"] {
 		position: relative;
 		font-size: 1.875rem;
-		color: @txt-blue;
+		color: @txt-std;
 		border-bottom: 2px solid #000;
 
 		.large-text {
 			display: block;
 			font: 800 4.375rem/1.2 'Open Sans';
-			color: @txt-lime;
+			color: @txt-alt;
 			text-transform: uppercase;
 			letter-spacing: 0.188rem;
 		}
@@ -35,7 +35,7 @@
 			background: @core-lime;
 			.rounded(5px);
 			display: inline-block;
-			color: @txt-blue;
+			color: @txt-std;
 			font: 800 1.875rem 'Open Sans';
 			text-transform: uppercase;
 			padding: 1rem 1.5rem;
@@ -116,3 +116,49 @@
 		width: 500px;
 		margin-left: -540px;
 	} // section-friend__content
+
+
+/*	Skillz
+	--------------------------------------------------------------------- */
+	.section-skillz {
+
+	} // .section-skillz
+
+	.section-skillz__circles {
+		position: absolute;
+		.hor-vert-centered;
+	}
+
+	.section-skillz__circle {
+		width: 255px;
+		height: 255px;
+		border: 6px solid @b-std;
+		.rounded(50%);
+		overflow: hidden;
+		background: #fff;
+		position: relative;
+		float: left;
+
+		& + .section-skillz__circle { margin-left: 18px; }
+
+		img {
+			max-width: none;
+			position: absolute;
+		} // img
+
+		&.giovanni {
+			img {
+				width: 300px;
+				.hor-centered;
+				margin-top: 30px;
+			}
+		} // .giovanni
+
+		&.leonardo {
+			img {
+				width: 300px;
+				.hor-centered;
+			    margin: 50px 0 0 -20px;
+			}
+		} // .giovanni
+	} // .section-skillz__circle
