@@ -51,6 +51,15 @@
 
 /*	Welcome
 	--------------------------------------------------------------------- */
+	.section-welcome {
+		&.active {
+			.section-welcome__content {
+				margin-top: 140px;
+				opacity: 1;
+			}
+		}
+	}
+
 	.section-welcome__giovanni {
 		.hor-centered;
 		top: 50%;
@@ -61,12 +70,23 @@
 		.hor-centered;
 		top: 50%;
 		text-align: center;
-		margin-top: 140px;
+		margin-top: 80px;
+		opacity: 0;
+		.transition(500ms, .3s);
 	} // .section-welcome__content
 
 
 /*	Actions
 	--------------------------------------------------------------------- */
+	.section-actions {
+		&.active {
+			.section-actions__content {
+				margin-top: 0px;
+				opacity: 1;
+			}
+		}
+	}
+
 	.section-actions__giovanni {
 		position: absolute;
 		top: 50%;
@@ -124,11 +144,23 @@
 		left: 50%;
 		width: 500px;
 		margin-left: -540px;
+		margin-top: -80px;
+		opacity: 0;
+	    .transition(500ms, .3s);
 	} // section-actions__content
 
 
 /*	Friend
 	--------------------------------------------------------------------- */
+	.section-friend {
+		&.active {
+			.section-friend__content {
+				margin-top: 0px;
+				opacity: 1;
+			}
+		}
+	}
+
 	.section-friend__giovanni {
 		position: absolute;
 		height: 300px;
@@ -149,6 +181,9 @@
 		left: 50%;
 		width: 500px;
 		margin-left: -540px;
+		margin-top: -80px;
+		opacity: 0;
+	    .transition(500ms, .3s);
 	} // section-friend__content
 
 
