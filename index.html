@@ -40,22 +40,22 @@
 
 <nav class="section-nav">
 	<ul>
-		<li><a class="section-nav__link" href="#">Welcome</a></li>
-		<li><a class="section-nav__link" href="#">Actions</a></li>
-		<li><a class="section-nav__link" href="#">Friends</a></li>
-		<li><a class="section-nav__link" href="#">Other skillz</a></li>
+		<li><a data-section="section-welcome" class="section-nav__link" href="#">Welcome</a></li>
+		<li><a data-section="section-actions" class="section-nav__link" href="#">Actions</a></li>
+		<li><a data-section="section-friend" class="section-nav__link" href="#">Friends</a></li>
+		<li><a data-section="section-skillz" class="section-nav__link" href="#">Other skillz</a></li>
 	</ul>
 </nav>
 
-<section class="section-welcome">
+<section class="section-welcome slide" data-section-name="section-welcome" data-slide="0">
 	<img class="section-welcome__giovanni" src="images/hamster.png" alt="Giovanni">
 	<div class="section-welcome__content">
 		<p>Meet <span class="large-text">Giovanni</span> The Front-End Hamster</p>
 	</div>
 </section>
 
-<section class="section-actions">
-	<img class="section-actions__giovanni spin" src="images/hamster.png" alt="Giovanni">
+<section class="section-actions slide" data-section-name="section-actions" data-slide="1">
+	<img class="section-actions__giovanni" src="images/hamster.png" alt="Giovanni">
 	<div class="section-actions__content">
 		<p>He can do a nmber of things!</p>
 		<p>
@@ -66,7 +66,7 @@
 	</div>
 </section>
 
-<section class="section-friend">
+<section class="section-friend slide" data-section-name="section-friend" data-slide="2">
 	<img class="section-friend__giovanni" src="images/hamster.png" alt="Giovanni">
 	<img class="section-friend__leonardo" src="images/frog.png" alt="Leonardo">
 	<div class="section-friend__content">
@@ -74,7 +74,7 @@
 	</div>
 </section>
 
-<section class="section-skillz">
+<section class="section-skillz slide" data-section-name="section-skillz" data-slide="3">
 	<div class="section-skillz__circles clearfix">
 		<div class="section-skillz__circle giovanni"><img class="section-skillz__giovanni" src="images/hamster.png" alt="Giovanni"></div>
 		<div class="section-skillz__circle leonardo"><img class="section-skillz__leonardo" src="images/frog.png" alt="Leonardo"></div>

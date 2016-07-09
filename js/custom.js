@@ -1,6 +1,19 @@
 jQuery(document).ready(function(){
 
-	resizeDiv();
+	// Init Scrollify plugin [https://github.com/lukehaas/Scrollify]
+	jQuery.scrollify({
+		section: "section",
+		scrollSpeed: 700,
+		before: function(i) {
+			var active = $(".slide.active");
+
+			active.addClass("remove");
+			$("[data-slide=" + i + "]").addClass("active");
+			active.removeClass("remove active");
+
+		},
+	});
+
 
 	// Action buttons
 	jQuery('.section-actions__content .button').on('click', function(e){
@@ -12,21 +25,24 @@ jQuery(document).ready(function(){
 		// Remove any previous classes and add new class for animation
 		jQuery('.section-actions__giovanni').removeClass('jump spin bounce');
 		jQuery('.section-actions__giovanni').addClass(animation);
-		
+	});
 
-				
+
+	// Navigation to section
+	jQuery('.section-nav__link').on('click', function(e){
+		e.preventDefault();
+
+		var sectionName = jQuery(this).attr('data-section');
+
+		jQuery.scrollify.move("#" + sectionName);
+
+		jQuery('.section-nav__link').removeClass('active');
+		jQuery(this).addClass('active');
 	});
 	
 });
 
 jQuery(window).smartresize(function(){
 
-	resizeDiv();
 
 });
-
-function resizeDiv() {
-	vpw = $(window).width();
-	vph = $(window).height();
-	$('section').css({'height': vph + 'px'});
-}
