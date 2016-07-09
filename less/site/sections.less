@@ -77,8 +77,55 @@
 	} // .section-actions
 
 	.section-actions__giovanni {
-		.vert-centered;
+		position: absolute;
+		top: 50%;
+		margin-top: -250px;
 		left: 50%;
+
+		&.jump {
+			@-webkit-keyframes jump {
+				0% { 
+					transform: translateY(0%); 
+				}
+				55% { 
+					transform: translateY(-30%); 
+				}
+				100% { 
+					transform: translateY(0%); 
+				}
+			}
+
+			animation: jump 1s;
+		}
+
+		&.bounce {
+			@-webkit-keyframes bounce {
+				0% { 
+					transform: translateY(-0%); 
+				}
+				60% { 
+					transform: translateY(-10%); 
+				}
+				100% { 
+					transform: translateY(-0%); 
+				}
+			}
+
+			animation: bounce .3s infinite;
+		}
+
+		&.spin {
+			@-webkit-keyframes spin {
+				0% { 
+					transform: rotate(0deg); 
+				}
+				100% { 
+					transform: rotate(360deg); 
+				}
+			}
+
+			animation: spin 1s;
+		}
 	} // .section-actions__giovanni
 
 	.section-actions__content {
