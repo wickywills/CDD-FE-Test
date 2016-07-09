@@ -29,6 +29,23 @@
 			text-transform: uppercase;
 			letter-spacing: 0.188rem;
 		}
+
+		.button {
+			background: @core-lime;
+			.rounded(5px);
+			display: inline-block;
+			color: @txt-blue;
+			font: 800 1.875rem 'Open Sans';
+			text-transform: uppercase;
+			padding: 1rem 1.5rem;
+			.transition;
+			text-decoration: none;
+			letter-spacing: 0.063rem;
+
+			&:hover {
+				background: #fff;
+			}
+		} // .button
 	}
 
 
@@ -50,3 +67,22 @@
 		text-align: center;
 		margin-top: 140px;
 	} // .section-welcome__content
+
+
+/*	Actions
+	--------------------------------------------------------------------- */
+	.section-actions {
+
+	} // .section-actions
+
+	.section-actions__giovanni {
+		.vert-centered;
+		left: 50%;
+	} // .section-actions__giovanni
+
+	.section-actions__content {
+		.vert-centered;
+		left: 50%;
+		width: 500px;
+		margin-left: -540px;
+	} // section-actions__content
