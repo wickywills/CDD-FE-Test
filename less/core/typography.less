@@ -45,6 +45,26 @@
 	a { color: #0e91cd; text-decoration: none; }
 	a:hover { color: #223876; text-decoration: underline; }
 
+	.button {
+		background: @core-lime;
+		.rounded(5px);
+		display: inline-block;
+		color: @txt-std;
+		font-family: 'Open Sans';
+		font-size: 1.875rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding: 1rem 1.5rem;
+		.transition;
+		text-decoration: none;
+		letter-spacing: 0.063rem;
+
+		&:hover {
+			background: #fff;
+			text-decoration: none;
+		}
+	} // .button
+
 
 /* 	Blockquotes
 	--------------------------------------------------------------------- */
@@ -62,6 +82,15 @@
 
 /* 	Responsive
 	--------------------------------------------------------------------- */
+	@media screen and (max-width: 800px) {
+		.button {
+			font-size: 1.125rem;
+			padding: .8rem 1.2rem;
 
+			&:hover {
+				background: #fff;
 
+			}
+		} // .button
+	} // < 800px
 

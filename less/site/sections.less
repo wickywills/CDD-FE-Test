@@ -31,25 +31,6 @@
 			text-transform: uppercase;
 			letter-spacing: 0.188rem;
 		}
-
-		.button {
-			background: @core-lime;
-			.rounded(5px);
-			display: inline-block;
-			color: @txt-std;
-			font-family: 'Open Sans';
-			font-size: 1.875rem;
-			font-weight: 800;
-			text-transform: uppercase;
-			padding: 1rem 1.5rem;
-			.transition;
-			text-decoration: none;
-			letter-spacing: 0.063rem;
-
-			&:hover {
-				background: #fff;
-			}
-		} // .button
 	}
 
 
@@ -251,7 +232,12 @@
 	} // .section-skillz__circle
 
 
+
+
 /*	Responsive
+	===================================================================== */
+
+/*	Welcome
 	--------------------------------------------------------------------- */
 	@media screen and (max-width: 800px) {
 		section[class^="section"] {
@@ -272,3 +258,28 @@
 		}
 		.section-welcome__giovanni { width: 200px; margin-top: -150px; } 
 	} // < 500px
+
+
+/*	Actions
+	--------------------------------------------------------------------- */
+	@media screen and (max-width: 1200px) {
+		.section-actions__content { margin-left: -420px; }
+	} // < 1200px
+
+	@media screen and (max-width: 1000px) {
+		.section-actions.active .section-actions__content { margin-top: 150px; }
+		.section-actions__content {
+			text-align: center;
+			margin-left: -250px;
+			margin-top: 120px;
+		} // .section-actions__content
+
+		.section-actions__giovanni {
+			margin-left: -200px;
+			margin-top: -350px;
+		}
+	} // < 1000px
+
+	@media screen and (max-width: 800px) {
+		
+	} // < 800px
