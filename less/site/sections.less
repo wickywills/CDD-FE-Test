@@ -249,3 +249,26 @@
 			}
 		} // .giovanni
 	} // .section-skillz__circle
+
+
+/*	Responsive
+	--------------------------------------------------------------------- */
+	@media screen and (max-width: 800px) {
+		section[class^="section"] {
+			font-size: 1.25rem;
+
+			.large-text { font-size: 3rem; }
+		}
+
+		.section-welcome.active .section-welcome__content { margin-top: 90px; }
+		.section-welcome__giovanni { width: 300px; margin-top: -260px; } 
+		.section-welcome__content { margin-top: 60px; }
+	} // < 800px
+
+
+	@media screen and (max-width: 500px) {
+		section[class^="section"] .large-text { 
+			font-size: 2rem; 
+		}
+		.section-welcome__giovanni { width: 200px; margin-top: -150px; } 
+	} // < 500px
