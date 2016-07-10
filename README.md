@@ -1,5 +1,8 @@
 # Front End test for CDD
 
+## Setup
+- Run `npm install` within cloned directory, then `grunt`
+
 ## Problems
 - Hamster blend mode is set to multiply on PSD. Unfortunately blend modes aren't supported in IE/Edge yet
 
