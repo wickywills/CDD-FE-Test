@@ -145,9 +145,9 @@
 			.section-friend__content {
 				margin-top: 0px;
 				opacity: 1;
-			}
-		}
-	}
+			} // .section-friend__content
+		} // &.active
+	} // .section-friend
 
 	.section-friend__giovanni {
 		position: absolute;
@@ -155,6 +155,7 @@
 		top: 50%;
 		left: 50%;
 	    margin: -210px 0 0 -100px;
+		z-index: 40;
 	} // .section-friend__giovanni
 
 	.section-friend__leonardo {
@@ -162,6 +163,7 @@
 		top: 50%;
 		left: 50%;
 		margin: -140px 0 0 20px;
+		z-index: 60;
 	} // .section-friend__leonardo
 
 	.section-friend__content {
@@ -174,6 +176,38 @@
 	    .transition(500ms, .3s);
 	} // section-friend__content
 
+	.section-friend__joke-bubble {
+		background: url(images/bubble.png);
+		width: 260px;
+		height: 240px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 80;
+		margin: -240px 0 0 -60px;
+		transform: scale(0.8, 0.8);
+		opacity: 0;
+		.transition(150ms);
+
+		&.active {
+			opacity: 1;
+			margin: -260px 0 0 -80px;
+			transform: scale(1,1);
+		}
+	} // .section-friend__joke-bubble
+
+	.section-friend__joke-question,
+	.section-friend__joke-answer {
+		.hor-vert-centered;
+		width: 200px;
+		text-align: center;
+		color: #000;
+		margin-left: -10px;
+		opacity: 0;
+		.transition;
+
+		&.active { opacity: 1; }
+	}
 
 /*	Skillz
 	--------------------------------------------------------------------- */

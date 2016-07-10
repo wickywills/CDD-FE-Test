@@ -39,6 +39,18 @@ jQuery(document).ready(function(){
 		jQuery('.section-nav__link').removeClass('active');
 		jQuery(this).addClass('active');
 	});
+
+
+	// Joke bubble
+	jQuery('.section-friend__leonardo').on('click', function(){
+		jQuery('.section-friend__joke-bubble').addClass('active');
+		jQuery('.section-friend__joke-question').addClass('active');
+
+		setTimeout(function(){
+			jQuery('.section-friend__joke-question').removeClass('active');
+			jQuery('.section-friend__joke-answer').addClass('active');
+		}, 3000);
+	});
 	
 });
 
