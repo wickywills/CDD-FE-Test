@@ -281,5 +281,22 @@
 	} // < 1000px
 
 	@media screen and (max-width: 800px) {
-		
+		.section-actions__giovanni {
+			margin-left: -170px;
+			margin-top: -260px;
+			width: 300px;
+		}
 	} // < 800px
+
+	@media screen and (max-width: 500px) {
+		section[class^="section"] .large-text { 
+			font-size: 2rem; 
+		}
+		.section-actions__giovanni { 
+			width: 200px; 
+			margin-top: -150px; 
+			margin-left: -110px;
+		} // .section-actions__giovanni
+
+		.section-actions__content { width: 300px; margin-left: -150px; }
+	} // < 500px
