@@ -24,7 +24,9 @@
 
 		.large-text {
 			display: block;
-			font: 800 4.375rem/1.2 'Open Sans';
+			font-family: 'Open Sans';
+			font-size: 4.375rem;
+			font-weight: 800;
 			color: @txt-alt;
 			text-transform: uppercase;
 			letter-spacing: 0.188rem;
@@ -35,7 +37,9 @@
 			.rounded(5px);
 			display: inline-block;
 			color: @txt-std;
-			font: 800 1.875rem 'Open Sans';
+			font-family: 'Open Sans';
+			font-size: 1.875rem;
+			font-weight: 800;
 			text-transform: uppercase;
 			padding: 1rem 1.5rem;
 			.transition;
@@ -94,45 +98,29 @@
 		left: 50%;
 
 		&.jump {
-			@-webkit-keyframes jump {
-				0% { 
-					transform: translateY(0%); 
-				}
-				55% { 
-					transform: translateY(-30%); 
-				}
-				100% { 
-					transform: translateY(0%); 
-				}
+			@keyframes jump {
+				0% 		{ transform: translateY(0%); }
+				55%		{ transform: translateY(-30%); }
+				100% 	{ transform: translateY(0%); }
 			}
 
 			animation: jump 1s;
 		}
 
 		&.bounce {
-			@-webkit-keyframes bounce {
-				0% { 
-					transform: translateY(-0%); 
-				}
-				60% { 
-					transform: translateY(-10%); 
-				}
-				100% { 
-					transform: translateY(-0%); 
-				}
+			@keyframes bounce {
+				0% 		{ transform: translateY(-0%); }
+				60% 	{ transform: translateY(-10%); }
+				100% 	{ transform: translateY(-0%); }
 			}
 
 			animation: bounce .3s infinite;
 		}
 
 		&.spin {
-			@-webkit-keyframes spin {
-				0% { 
-					transform: rotate(0deg); 
-				}
-				100% { 
-					transform: rotate(360deg); 
-				}
+			@keyframes spin {
+				0% 		{ transform: rotate(0deg); }
+				100% 	{ transform: rotate(360deg); }
 			}
 
 			animation: spin 1s;
